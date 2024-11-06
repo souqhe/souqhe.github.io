@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'pusab';
+    src: url('./fonts/8-bit-pusab.ttf');
+}
+
+body {
+    font-family: 'pusab','arial';
+    > div {
+        height: fit-content;
+    }
+}
+
+.button-left {
+    place-self:center start;
+    grid-column: 1;
+    font-size: 30px;
+}
+
+.button-right {
+    font-size: 30px;
+    place-self: center end;
+    grid-column: 12;
+}
+
+.button {
+    border-radius: 50px;
+    background: #144E75; 
+    background-color:#dccfff;
+    color: #b1a4d8;
+    box-shadow: rgba(0, 0, 0, 0.322) 5px 5px 15px 5px;
+    z-index: 3;
+
+}
+
+.images {
+    display: grid;
+    grid-column: 3 / span 8;
+    margin: auto;
+    overflow: hidden;
+    min-width: 800px;        
+    max-height: 500px;
+    > * {
+        grid-area: 1/1;
+    }
+}
+
+.main {
+    place-self: center;
+    border-right: 9px solid #FFFFFF;
+    border-left: 9px solid #FFFFFF;
+    z-index: 2;
+    opacity: 1;
+}
+
+.mainleft {
+    place-self: start;
+    z-index: 1;
+}
+
+.mainright {
+    place-self: end;
+    z-index: 1;
+}
+
+.autres {
+    z-index: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
